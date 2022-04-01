@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TI_Dzemianenka_1</title>
+</head>
+<body>
+<h1>TI</h1>
+<h2>IPR 1</h2>
+<main>
+    <section>
+        <h2>Task</h2>
+        <p>Encoder based on the classical Port diagram method for English texts.
+            User sets the keyword from keyboard.
+            Read text from file.
+            The program must encrypt only characters of the specified alphabet, ignoring all other characters.
+            The result of the work programs - encrypted/decrypted file.</p>
+    </section>
+    <section>
+        <h2>Port diagram method</h2>
+        <div>
+            <form>
+                <p>
+                    <label>
+                        Chose encrypted file:<br>
+                        <input type="file">
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        Define the keyword:<br>
+                        <input type="text" value="default">
+                    </label>
+                </p>
+                <input type="submit" value="Encrypt">
+            </form>
+        </div>
+    </section>
+    <section id="statistic" style="display: none">
+        <h2>Character frequency</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Source text, number of references</th>
+                <th>Source text, % of the total length of the text</th>
+                <th>Ciphertext, number of mentions</th>
+                <th>Encrypted text, % of the total text length</th>
+            </tr>
+            </thead>
+        </table>
+        <div id="charts"></div>
+    </section>
+</main>
+<style>
+    body {
+        background: gainsboro;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+        border: 1px solid #000;
+        max-width: 140px;
+        text-align: right;
+    }
+
+    table th {
+        text-align: center;
+    }
+
+    .row {
+        margin-top: 1em;
+    }
+
+    .row-label {
+        font-size: 1em;
+    }
+
+    .row-inner {
+        display: flex;
+        height: 1em;
+        margin-right: auto;
+        align-items: center;
+        background: royalblue;
+        color: yellow;
+        text-shadow: #fff 1px 0 10px;
+        white-space: nowrap;
+    }
+
+    .row-inner:last-child {
+        background: darkblue;
+    }
+</style>
+<script src="js/main.js" type="module"></script>
+</body>
+</html>
