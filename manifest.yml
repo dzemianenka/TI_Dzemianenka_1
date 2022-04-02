@@ -1,0 +1,5 @@
+---
+applications:
+  - name: ti-dzemianenka-1
+    memory: 128M
+    disk_quota: 128M
